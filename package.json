@@ -1,0 +1,51 @@
+{
+  "engine": ">=10.17.1",
+  "author": {
+    "name": "John McLear",
+    "email": "john@mclear.co.uk"
+  },
+  "bugs": {
+    "url": "https://github.com/ether/ep_prometheus/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Etherpad plugin to show performance stats in /stats url",
+  "funding": {
+    "type": "individual",
+    "url": "http://etherpad.org/"
+  },
+  "homepage": "https://github.com/ether/ep_prometheus#readme",
+  "keywords": [
+    "etherpad",
+    "plugin",
+    "prometheus",
+    "ep"
+  ],
+  "name": "ep_prometheus",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ether/ep_prometheus.git"
+  },
+  "version": "0.0.1",
+  "devDependencies": {
+    "eslint": "^7.18.0",
+    "eslint-config-etherpad": "^1.0.23",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-mocha": "^8.0.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-you-dont-need-lodash-underscore": "^6.10.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": "etherpad/plugin"
+  },
+  "peerDependencies": {
+    "ep_etherpad-lite": ">=1.8.7"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
+  }
+}
