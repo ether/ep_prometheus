@@ -1,7 +1,7 @@
-# Performance Test Hooks for Etherpad
+# Prometheus Etherpad integration
 
-A plugin to get test data to help improve the performance of Etherpad.
+Exposes endpoint at ``/metrics`` for Grafana / Prometheus to slobber from.
 
 ## Usage
 
-See the collected stats at ``/stats``
+See the collected stats at ``/metrics``
