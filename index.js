@@ -8,7 +8,7 @@ exports.expressCreateServer = (hookName, args, cb) => {
     const flattened = flatten(stats.toJSON());
     for (const [dirtyKey, value] of Object.entries(flattened)) {
       if (!isNaN(value)) {
-        const key = dirtyKey.replace(/[^a-zA-Z0-9-_]/g, '_');
+        const key = dirtyKey.replace(/[^a-zA-Z0-9_]/g, '_');
         response += `# HELP ${key} Some Etherpad related data\n`;
         response += `# TYPE ${key} gauge\n`;
         response += `${key} ${value}\n\n`;
