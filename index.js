@@ -7,9 +7,11 @@ exports.expressCreateServer = (hookName, args, cb) => {
     let response = '';
     const flattened = flatten(stats.toJSON());
     for (const [key, value] of Object.entries(flattened)) {
-      response += `# HELP ${key} Some Etherpad related data\n`;
-      response += `# TYPE ${key} gauge\n`;
-      response += `${key} ${value}\n\n`;
+      if (!isNaN(value)) {
+        response += `# HELP ${key} Some Etherpad related data\n`;
+        response += `# TYPE ${key} gauge\n`;
+        response += `${key} ${value}\n\n`;
+      }
     }
     res.setHeader('content-type', 'text/plain');
     res.send(response);
