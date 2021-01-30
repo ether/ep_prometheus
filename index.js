@@ -9,7 +9,7 @@ exports.expressCreateServer = (hookName, args, cb) => {
     for (const [key, value] of Object.entries(flattened)) {
       response += `# HELP ${key} Some Etherpad related data\n`;
       response += `# TYPE ${key} gauge\n`;
-      response += `# ${key} ${value}\n\n`;
+      response += `${key} ${value}\n\n`;
     }
     res.setHeader('content-type', 'text/plain');
     res.send(response);
