@@ -11,12 +11,19 @@ See the collected stats at ``/metrics``
 ```
 {__name__=~"ep_performance_test_hooks_loadTimes__(.*)_fetchUntilResponseEndTime"}
 ``` 
+
 ```
 {__name__=~"ep_performance_test_hooks_loadTimes__(.*)_fetchUntilResponseEndTime"}
 ```
+
 ```
 ep_performance_test_hooks_etherpadHooksDuration_postAceInit
 ```
+
 ```
 totalUsers
+```
+
+```
+(memoryUsageHeap / 1024 / 1024)
 ```
