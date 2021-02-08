@@ -1,3 +1,5 @@
+![Publish Status](https://github.com/ether/ep_prometheus/workflows/Node.js%20Package/badge.svg) ![Backend Tests Status](https://github.com/ether/ep_prometheus/workflows/Backend%20tests/badge.svg)
+
 # Prometheus Etherpad integration
 
 Exposes endpoint at ``/metrics`` for Grafana / Prometheus to slobber from.
