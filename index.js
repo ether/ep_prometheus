@@ -21,14 +21,12 @@ exports.expressCreateServer = (hookName, args, cb) => {
 };
 
 const flatten = (obj, parent, res = {}) => {
-  for (const key in obj) {
-    if (obj[key]) { // HACK FIX: TODO: Tidy up to be for -> of
-      const propName = parent ? `${parent}_${key}` : key;
-      if (typeof obj[key] === 'object') {
-        flatten(obj[key], propName, res);
-      } else {
-        res[propName] = obj[key];
-      }
+  for (const [key, value] of Object.entries(obj)) {
+    const propName = parent ? `${parent}_${key}` : key;
+    if (value != null && typeof value === 'object') {
+      flatten(value, propName, res);
+    } else {
+      res[propName] = value;
     }
   }
   return res;
